@@ -1,10 +1,7 @@
-//
 //  ViewController.swift
 //  Calculator3D
-//
 //  Created by Fotios Tragopoulos on 12/12/2016.
 //  Copyright © 2016 Fotios Tragopoulos. All rights reserved.
-//
 
 import UIKit
 
@@ -60,9 +57,30 @@ class ViewController: UIViewController {
         processOperation(operation: currentOperation)
     }
     
+    @IBAction func doubleZeroPressed(sender: AnyObject) {
+        runningNumber += "00"
+        outputLbl.text = runningNumber
+    }
+
+    @IBAction func tripleZeroPressed(sender: AnyObject) {
+        runningNumber += "000"
+        outputLbl.text = runningNumber
+    }
+    
+    @IBAction func commaPressed(sender: AnyObject) {
+        runningNumber += "."
+        outputLbl.text = runningNumber
+    }
+    
+    @IBAction func acPressed(sender: AnyObject) {
+        runningNumber = ""
+        outputLbl.text = runningNumber
+    }
+    
     func processOperation(operation: Operation) {
         
         if currentOperation != Operation.Empty {
+            
             //A user selected an operator, but then selected another operator without first entering a number
             if runningNumber != "" {
                 rightValStr = runningNumber
@@ -84,6 +102,7 @@ class ViewController: UIViewController {
             
             currentOperation = operation
         }   else {
+            
             //This is the first time an operator has been pressed
             leftValStr = runningNumber
             runningNumber = ""
