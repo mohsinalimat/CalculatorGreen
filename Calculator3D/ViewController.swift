@@ -36,15 +36,13 @@ class ViewController: UIViewController {
     @IBAction func zeroClicked(_ sender: Any) {
         if landscapeOutputLbl.text != "" {
             runningNumber += "0"
-            landscapeOutputLbl.text = runningNumber
-            portraitOutputLbl.text = runningNumber
+            outputLbl()
         }
     }
     @IBAction func pzeroClicked(_ sender: Any) {
         if portraitOutputLbl.text != "" {
             runningNumber += "0"
-            landscapeOutputLbl.text = runningNumber
-            portraitOutputLbl.text = runningNumber
+            outputLbl()
         }
     }
     
@@ -52,15 +50,13 @@ class ViewController: UIViewController {
     @IBAction func doubleZeroClicked(_ sender: Any) {
         if landscapeOutputLbl.text != "" {
             runningNumber += "00"
-            landscapeOutputLbl.text = runningNumber
-            portraitOutputLbl.text = runningNumber
+            outputLbl()
         }
     }
     @IBAction func pdoubleZeroClicked(_ sender: Any) {
         if portraitOutputLbl.text != "" {
             runningNumber += "00"
-            landscapeOutputLbl.text = runningNumber
-            portraitOutputLbl.text = runningNumber
+            outputLbl()
         }
     }
 
@@ -68,15 +64,13 @@ class ViewController: UIViewController {
     @IBAction func tripleZeroClicked(_ sender: Any) {
         if landscapeOutputLbl.text != "" {
             runningNumber += "000"
-            landscapeOutputLbl.text = runningNumber
-            portraitOutputLbl.text = runningNumber
+            outputLbl()
         }
     }
     @IBAction func ptripleZeroClicked(_ sender: Any) {
         if portraitOutputLbl.text != "" {
             runningNumber += "000"
-            landscapeOutputLbl.text = runningNumber
-            portraitOutputLbl.text = runningNumber
+            outputLbl()
         }
     }
     
@@ -86,8 +80,7 @@ class ViewController: UIViewController {
             
         } else {
             runningNumber += "."
-            landscapeOutputLbl.text = runningNumber
-            portraitOutputLbl.text = runningNumber
+            outputLbl()
         }
     }
     @IBAction func pcommaClicked(_ sender: Any) {
@@ -95,117 +88,98 @@ class ViewController: UIViewController {
             
         } else {
             runningNumber += "."
-            landscapeOutputLbl.text = runningNumber
-            portraitOutputLbl.text = runningNumber
+            outputLbl()
         }
     }
     
     //Button 1
     @IBAction func oneClicked(_ sender: Any) {
         runningNumber += "1"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     @IBAction func poneClicked(_ sender: Any) {
         runningNumber += "1"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     
     //Button 2
     @IBAction func twoClicked(_ sender: Any) {
         runningNumber += "2"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     @IBAction func ptwoClicked(_ sender: Any) {
         runningNumber += "2"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     
     //Button 3
     @IBAction func threeClicked(_ sender: Any) {
         runningNumber += "3"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     @IBAction func pthreeClicked(_ sender: Any) {
         runningNumber += "3"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     
     //Button 4
     @IBAction func fourClicked(_ sender: Any) {
         runningNumber += "4"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     @IBAction func pfourClicked(_ sender: Any) {
         runningNumber += "4"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     
     //Button 5
     @IBAction func fiveClicked(_ sender: Any) {
         runningNumber += "5"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     @IBAction func pfiveClicked(_ sender: Any) {
         runningNumber += "5"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     
     //Button 6
     @IBAction func sixClicked(_ sender: Any) {
         runningNumber += "6"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     @IBAction func psixClicked(_ sender: Any) {
         runningNumber += "6"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     
     //Button 7
     @IBAction func sevenClicked(_ sender: Any) {
         runningNumber += "7"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     @IBAction func psevenClicked(_ sender: Any) {
         runningNumber += "7"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
    
     //Buttton 8
     @IBAction func eightClicked(_ sender: Any) {
         runningNumber += "8"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     @IBAction func peightClicked(_ sender: Any) {
         runningNumber += "8"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     
     //Button 9
     @IBAction func nineClicked(_ sender: Any) {
         runningNumber += "9"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     @IBAction func pnineClicked(_ sender: Any) {
         runningNumber += "9"
-        landscapeOutputLbl.text = runningNumber
-        portraitOutputLbl.text = runningNumber
+        outputLbl()
     }
     
     //Button +
@@ -218,47 +192,55 @@ class ViewController: UIViewController {
     
     //Button -
     @IBAction func subtrackClicked(_ sender: Any) {
+        processOperation(operation: .Subtrack)
     }
     @IBAction func prsubtrackClicked(_ sender: Any) {
+        processOperation(operation: .Subtrack)
     }
     
     //Button ÷
     @IBAction func divideClicked(_ sender: Any) {
+        processOperation(operation: .Divide)
     }
     @IBAction func pdivideClicked(_ sender: Any) {
+        processOperation(operation: .Divide)
     }
     
     //Button x
     @IBAction func multiplyClicked(_ sender: Any) {
+        processOperation(operation: .Multiply)
     }
     @IBAction func pmultiplyClicked(_ sender: Any) {
+        processOperation(operation: .Multiply)
     }
     
     //Button =
     @IBAction func resultClicked(_ sender: Any) {
         processOperation(operation: currentOperation)
+        currentOperation = Operation.Empty
     }
     @IBAction func presultClicked(_ sender: Any) {
         processOperation(operation: currentOperation)
+        currentOperation = Operation.Empty
     }
  
     //Button AC
     @IBAction func resetClicked(_ sender: Any) {
         result = ""
-        landscapeOutputLbl.text = result
-        portraitOutputLbl.text = result
+        currentOperation = Operation.Empty
+        outputLbl()
     }
     @IBAction func presetClicked(_ sender: Any) {
         result = ""
-        landscapeOutputLbl.text = result
-        portraitOutputLbl.text = result
+        currentOperation = Operation.Empty
+        outputLbl()
     }
     
-    
-//    func outputLbl() {
-//        landscapeOutputLbl.text = result
-//        portraitOutputLbl.text = result
-//    }
+    //Printing the result on the Labels
+    func outputLbl() {
+        landscapeOutputLbl.text = runningNumber
+        portraitOutputLbl.text = runningNumber
+    }
     
     func processOperation(operation: Operation) {
         
@@ -294,8 +276,4 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
-    
 }
-
