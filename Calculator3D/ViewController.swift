@@ -227,17 +227,21 @@ class ViewController: UIViewController {
     //Button AC
     @IBAction func resetClicked(_ sender: Any) {
         result = ""
+        runningNumber = ""
         currentOperation = Operation.Empty
         outputLbl()
     }
     @IBAction func presetClicked(_ sender: Any) {
         result = ""
+        runningNumber = ""
         currentOperation = Operation.Empty
         outputLbl()
     }
     
     //Printing the result on the Labels
     func outputLbl() {
+        
+        
         landscapeOutputLbl.text = runningNumber
         portraitOutputLbl.text = runningNumber
     }
@@ -264,6 +268,7 @@ class ViewController: UIViewController {
                 leftValStr = result
                 landscapeOutputLbl.text = result
                 portraitOutputLbl.text = result
+                runningNumber = result
             }
             
             currentOperation = operation
