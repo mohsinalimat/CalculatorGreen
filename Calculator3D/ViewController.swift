@@ -9,6 +9,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var landscapeOutputLbl: UILabel!
     @IBOutlet weak var portraitOutputLbl: UILabel!
+    @IBOutlet weak var controlPanel: UILabel!
+    @IBOutlet weak var portraitControlPanel: UILabel!
     
     enum Operation: String {
         case Divide = "/"
@@ -18,6 +20,7 @@ class ViewController: UIViewController {
         case Empty = "Empty"
     }
     
+    var ctrlPanel = ""
     var runningNumber = ""
     var currentOperation = Operation.Empty
     var leftValStr = ""
@@ -36,12 +39,14 @@ class ViewController: UIViewController {
     @IBAction func zeroClicked(_ sender: Any) {
         if landscapeOutputLbl.text != "" {
             runningNumber += "0"
+            ctrlPanel += "0"
             outputLbl()
         }
     }
     @IBAction func pzeroClicked(_ sender: Any) {
         if portraitOutputLbl.text != "" {
             runningNumber += "0"
+            ctrlPanel += "0"
             outputLbl()
         }
     }
@@ -50,12 +55,14 @@ class ViewController: UIViewController {
     @IBAction func doubleZeroClicked(_ sender: Any) {
         if landscapeOutputLbl.text != "" {
             runningNumber += "00"
+            ctrlPanel += "00"
             outputLbl()
         }
     }
     @IBAction func pdoubleZeroClicked(_ sender: Any) {
         if portraitOutputLbl.text != "" {
             runningNumber += "00"
+            ctrlPanel += "00"
             outputLbl()
         }
     }
@@ -64,12 +71,14 @@ class ViewController: UIViewController {
     @IBAction func tripleZeroClicked(_ sender: Any) {
         if landscapeOutputLbl.text != "" {
             runningNumber += "000"
+            ctrlPanel += "000"
             outputLbl()
         }
     }
     @IBAction func ptripleZeroClicked(_ sender: Any) {
         if portraitOutputLbl.text != "" {
             runningNumber += "000"
+            ctrlPanel += "000"
             outputLbl()
         }
     }
@@ -80,6 +89,7 @@ class ViewController: UIViewController {
             
         } else {
             runningNumber += "."
+            ctrlPanel += "."
             outputLbl()
         }
     }
@@ -88,6 +98,7 @@ class ViewController: UIViewController {
             
         } else {
             runningNumber += "."
+            ctrlPanel += "."
             outputLbl()
         }
     }
@@ -95,123 +106,173 @@ class ViewController: UIViewController {
     //Button 1
     @IBAction func oneClicked(_ sender: Any) {
         runningNumber += "1"
+        ctrlPanel += "1"
         outputLbl()
     }
     @IBAction func poneClicked(_ sender: Any) {
         runningNumber += "1"
+        ctrlPanel += "1"
         outputLbl()
     }
     
     //Button 2
     @IBAction func twoClicked(_ sender: Any) {
         runningNumber += "2"
+        ctrlPanel += "2"
         outputLbl()
     }
     @IBAction func ptwoClicked(_ sender: Any) {
         runningNumber += "2"
+        ctrlPanel += "2"
         outputLbl()
     }
     
     //Button 3
     @IBAction func threeClicked(_ sender: Any) {
         runningNumber += "3"
+        ctrlPanel += "3"
         outputLbl()
     }
     @IBAction func pthreeClicked(_ sender: Any) {
         runningNumber += "3"
+        ctrlPanel += "3"
         outputLbl()
     }
     
     //Button 4
     @IBAction func fourClicked(_ sender: Any) {
         runningNumber += "4"
+        ctrlPanel += "4"
         outputLbl()
     }
     @IBAction func pfourClicked(_ sender: Any) {
         runningNumber += "4"
+        ctrlPanel += "4"
         outputLbl()
     }
     
     //Button 5
     @IBAction func fiveClicked(_ sender: Any) {
         runningNumber += "5"
+        ctrlPanel += "5"
         outputLbl()
     }
     @IBAction func pfiveClicked(_ sender: Any) {
         runningNumber += "5"
+        ctrlPanel += "5"
         outputLbl()
     }
     
     //Button 6
     @IBAction func sixClicked(_ sender: Any) {
         runningNumber += "6"
+        ctrlPanel += "6"
         outputLbl()
     }
     @IBAction func psixClicked(_ sender: Any) {
         runningNumber += "6"
+        ctrlPanel += "6"
         outputLbl()
     }
     
     //Button 7
     @IBAction func sevenClicked(_ sender: Any) {
         runningNumber += "7"
+        ctrlPanel += "7"
         outputLbl()
     }
     @IBAction func psevenClicked(_ sender: Any) {
         runningNumber += "7"
+        ctrlPanel += "7"
         outputLbl()
     }
    
     //Buttton 8
     @IBAction func eightClicked(_ sender: Any) {
         runningNumber += "8"
+        ctrlPanel += "8"
         outputLbl()
     }
     @IBAction func peightClicked(_ sender: Any) {
         runningNumber += "8"
+        ctrlPanel += "8"
         outputLbl()
     }
     
     //Button 9
     @IBAction func nineClicked(_ sender: Any) {
         runningNumber += "9"
+        ctrlPanel += "9"
         outputLbl()
     }
     @IBAction func pnineClicked(_ sender: Any) {
         runningNumber += "9"
+        ctrlPanel += "9"
         outputLbl()
     }
     
     //Button +
     @IBAction func addClicked(_ sender: Any) {
         processOperation(operation: .Add)
+        ctrlPanel += " + "
+        runningNumber = ""
+        controlPanel.text = ctrlPanel
+        portraitControlPanel.text = ctrlPanel
     }
     @IBAction func paddClicked(_ sender: Any) {
         processOperation(operation: .Add)
+        ctrlPanel += " + "
+        runningNumber = ""
+        controlPanel.text = ctrlPanel
+        portraitControlPanel.text = ctrlPanel
     }
     
     //Button -
     @IBAction func subtrackClicked(_ sender: Any) {
         processOperation(operation: .Subtrack)
+        ctrlPanel += " - "
+        runningNumber = ""
+        controlPanel.text = ctrlPanel
+        portraitControlPanel.text = ctrlPanel
     }
     @IBAction func prsubtrackClicked(_ sender: Any) {
         processOperation(operation: .Subtrack)
+        ctrlPanel += " - "
+        runningNumber = ""
+        controlPanel.text = ctrlPanel
+        portraitControlPanel.text = ctrlPanel
     }
     
     //Button ÷
     @IBAction func divideClicked(_ sender: Any) {
         processOperation(operation: .Divide)
+        ctrlPanel += " ÷ "
+        runningNumber = ""
+        controlPanel.text = ctrlPanel
+        portraitControlPanel.text = ctrlPanel
     }
     @IBAction func pdivideClicked(_ sender: Any) {
         processOperation(operation: .Divide)
+        ctrlPanel += " ÷ "
+        runningNumber = ""
+        controlPanel.text = ctrlPanel
+        portraitControlPanel.text = ctrlPanel
     }
     
     //Button x
     @IBAction func multiplyClicked(_ sender: Any) {
         processOperation(operation: .Multiply)
+        ctrlPanel += " x "
+        runningNumber = ""
+        controlPanel.text = ctrlPanel
+        portraitControlPanel.text = ctrlPanel
     }
     @IBAction func pmultiplyClicked(_ sender: Any) {
         processOperation(operation: .Multiply)
+        ctrlPanel += " x "
+        runningNumber = ""
+        controlPanel.text = ctrlPanel
+        portraitControlPanel.text = ctrlPanel
     }
     
     //Button =
@@ -228,12 +289,14 @@ class ViewController: UIViewController {
     @IBAction func resetClicked(_ sender: Any) {
         result = ""
         runningNumber = ""
+        ctrlPanel = ""
         currentOperation = Operation.Empty
         outputLbl()
     }
     @IBAction func presetClicked(_ sender: Any) {
         result = ""
         runningNumber = ""
+        ctrlPanel = ""
         currentOperation = Operation.Empty
         outputLbl()
     }
@@ -242,6 +305,8 @@ class ViewController: UIViewController {
     func outputLbl() {
         landscapeOutputLbl.text = runningNumber
         portraitOutputLbl.text = runningNumber
+        controlPanel.text = ctrlPanel
+        portraitControlPanel.text = ctrlPanel
     }
     
     func processOperation(operation: Operation) {
@@ -288,6 +353,9 @@ class ViewController: UIViewController {
                 landscapeOutputLbl.text = result
                 portraitOutputLbl.text = result
                 runningNumber = result
+                ctrlPanel += " = \(result)"
+                controlPanel.text = ctrlPanel
+                portraitControlPanel.text = ctrlPanel
             }
             
             currentOperation = operation
