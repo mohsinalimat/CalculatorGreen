@@ -240,8 +240,6 @@ class ViewController: UIViewController {
     
     //Printing the result on the Labels
     func outputLbl() {
-        
-        
         landscapeOutputLbl.text = runningNumber
         portraitOutputLbl.text = runningNumber
     }
@@ -255,14 +253,35 @@ class ViewController: UIViewController {
                 rightValStr = runningNumber
                 runningNumber = ""
                 
+                //This function removes the trailing zero after the double number
+                func forTailingZero(temp: Double) -> String{
+                    let tempVar = String(format: "%g", temp)
+                    return tempVar
+                }
+                
                 if currentOperation == Operation.Multiply {
-                    result = "\(Double(leftValStr)! * Double(rightValStr)!)"
+                    
+                    let c = Double(leftValStr)! * Double(rightValStr)!
+                    let d: String? = forTailingZero(temp: c)
+                    result = d!
+                    
                 }   else if currentOperation == Operation.Divide {
-                    result = "\(Double(leftValStr)! / Double(rightValStr)!)"
+                    
+                    let c = Double(leftValStr)! / Double(rightValStr)!
+                    let d: String? = forTailingZero(temp: c)
+                    result = d!
+                    
                 }   else if currentOperation == Operation.Subtrack {
-                    result = "\(Double(leftValStr)! - Double(rightValStr)!)"
+                    
+                    let c = Double(leftValStr)! - Double(rightValStr)!
+                    let d: String? = forTailingZero(temp: c)
+                    result = d!
+                    
                 }   else if currentOperation == Operation.Add {
-                    result = "\(Double(leftValStr)! + Double(rightValStr)!)"
+                    
+                    let c = Double(leftValStr)! + Double(rightValStr)!
+                    let d: String? = forTailingZero(temp: c)
+                    result = d!
                 }
                 
                 leftValStr = result
