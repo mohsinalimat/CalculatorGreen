@@ -301,6 +301,23 @@ class ViewController: UIViewController {
         outputLbl()
     }
     
+//Special Buttons Actions
+    
+    //Square Diagonal
+    @IBAction func squareDiagonal(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let diagonal = round(10000*(sqrt(2)*a!))/10000
+            runningNumber = "\(diagonal)"
+            ctrlPanel += "◪\(diagonal)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+
+    
+    
     //Printing the result on the Labels
     func outputLbl() {
         landscapeOutputLbl.text = runningNumber
@@ -325,25 +342,18 @@ class ViewController: UIViewController {
                 }
                 
                 if currentOperation == Operation.Multiply {
-                    
                     let c = Double(leftValStr)! * Double(rightValStr)!
                     let d: String? = forTailingZero(temp: c)
                     result = d!
-                    
                 }   else if currentOperation == Operation.Divide {
-                    
                     let c = Double(leftValStr)! / Double(rightValStr)!
                     let d: String? = forTailingZero(temp: c)
                     result = d!
-                    
                 }   else if currentOperation == Operation.Subtrack {
-                    
                     let c = Double(leftValStr)! - Double(rightValStr)!
                     let d: String? = forTailingZero(temp: c)
                     result = d!
-                    
                 }   else if currentOperation == Operation.Add {
-                    
                     let c = Double(leftValStr)! + Double(rightValStr)!
                     let d: String? = forTailingZero(temp: c)
                     result = d!
