@@ -203,6 +203,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGO-ZP-VI1">
                                                         <rect key="frame" x="0.0" y="0.0" width="59.5" height="56.5"/>
                                                         <state key="normal" image="SquarePerimeter"/>
+                                                        <connections>
+                                                            <action selector="squarePerimeter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YJh-f6-qXW"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Orf-zA-xWN">
                                                         <rect key="frame" x="59.5" y="0.0" width="56.5" height="56.5"/>
@@ -210,6 +213,9 @@
                                                             <constraint firstAttribute="width" secondItem="Orf-zA-xWN" secondAttribute="height" multiplier="1:1" id="jXw-A4-WJV"/>
                                                         </constraints>
                                                         <state key="normal" image="SquareSA"/>
+                                                        <connections>
+                                                            <action selector="squareSA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tcv-tG-7je"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0E-AB-sWR">
                                                         <rect key="frame" x="116" y="0.0" width="56.5" height="56.5"/>
@@ -227,6 +233,9 @@
                                                             <constraint firstAttribute="width" secondItem="2KJ-ZP-2JQ" secondAttribute="height" multiplier="1:1" id="8Zc-y8-3vr"/>
                                                         </constraints>
                                                         <state key="normal" image="CubeVolume"/>
+                                                        <connections>
+                                                            <action selector="cubeVolume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fWI-Zu-05d"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzL-pw-ASi">
                                                         <rect key="frame" x="229" y="0.0" width="56.5" height="56.5"/>
@@ -234,6 +243,9 @@
                                                             <constraint firstAttribute="width" secondItem="GzL-pw-ASi" secondAttribute="height" multiplier="1:1" id="83u-Tr-gPA"/>
                                                         </constraints>
                                                         <state key="normal" image="RhombusPerimeter"/>
+                                                        <connections>
+                                                            <action selector="rhombusPerimeter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B6a-W2-MNj"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnt-5a-cPA">
                                                         <rect key="frame" x="285.5" y="0.0" width="56.5" height="56.5"/>
@@ -295,14 +307,20 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="iBD-ME-Bcw" secondAttribute="height" multiplier="1:1" id="gJE-DQ-Gjv"/>
                                                         </constraints>
-                                                        <state key="normal" image="CirclePerimeter"/>
+                                                        <state key="normal" image="CircleSA"/>
+                                                        <connections>
+                                                            <action selector="circlePerimeter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g1h-rB-Qet"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmJ-IP-frD">
                                                         <rect key="frame" x="57" y="0.0" width="56.5" height="57"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="fmJ-IP-frD" secondAttribute="height" multiplier="1:1" id="F8J-Ya-ieU"/>
                                                         </constraints>
-                                                        <state key="normal" image="CircleSA"/>
+                                                        <state key="normal" image="CirclePerimeter"/>
+                                                        <connections>
+                                                            <action selector="circleSA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lLc-By-2t9"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcq-3j-mV0">
                                                         <rect key="frame" x="113.5" y="0.0" width="57" height="57"/>
@@ -310,6 +328,9 @@
                                                             <constraint firstAttribute="width" secondItem="fcq-3j-mV0" secondAttribute="height" multiplier="1:1" id="x7n-sn-PhU"/>
                                                         </constraints>
                                                         <state key="normal" image="SphereSA"/>
+                                                        <connections>
+                                                            <action selector="sphereSA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vty-BK-U9F"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoz-oW-NPS">
                                                         <rect key="frame" x="170.5" y="0.0" width="56.5" height="57"/>
@@ -317,6 +338,9 @@
                                                             <constraint firstAttribute="width" secondItem="yoz-oW-NPS" secondAttribute="height" multiplier="1:1" id="95X-1i-miS"/>
                                                         </constraints>
                                                         <state key="normal" image="SphereVolume"/>
+                                                        <connections>
+                                                            <action selector="sphereVolume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zFx-P4-h0M"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUg-IK-iWu">
                                                         <rect key="frame" x="227" y="0.0" width="57" height="57"/>
@@ -324,6 +348,9 @@
                                                             <constraint firstAttribute="width" secondItem="PUg-IK-iWu" secondAttribute="height" multiplier="1:1" id="GPo-hw-7HL"/>
                                                         </constraints>
                                                         <state key="normal" image="RhombusSA"/>
+                                                        <connections>
+                                                            <action selector="rhombusSAangle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hbt-gP-8Xw"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB5-w2-wUb">
                                                         <rect key="frame" x="284" y="0.0" width="57" height="57"/>

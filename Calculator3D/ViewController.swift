@@ -35,6 +35,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    func forTailingZero(temp: Double) -> String{
+        let tempVar = String(format: "%g", temp)
+        return tempVar
+    }
+    
     //Button 0
     @IBAction func zeroClicked(_ sender: Any) {
         if landscapeOutputLbl.text != "" {
@@ -302,21 +307,146 @@ class ViewController: UIViewController {
     }
     
 //Special Buttons Actions
+ 
+    //Square Perimeter
+    @IBAction func squarePerimeter(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let perimeter = round(10000*(4*a!))/10000
+            let d: String = forTailingZero(temp: perimeter)
+            runningNumber = "\(d)"
+            ctrlPanel += "☐\(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+    
+    //Square Surface Area
+    @IBAction func squareSA(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let surfaceArea = round(10000*(a!*a!))/10000
+            let d: String = forTailingZero(temp: surfaceArea)
+            runningNumber = "\(d)"
+            ctrlPanel += "◼︎\(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
     
     //Square Diagonal
     @IBAction func squareDiagonal(_ sender: Any) {
         if runningNumber != "" {
             let a = Double(runningNumber)
             let diagonal = round(10000*(sqrt(2)*a!))/10000
-            runningNumber = "\(diagonal)"
-            ctrlPanel += "◪\(diagonal)"
+            let d: String = forTailingZero(temp: diagonal)
+            runningNumber = "\(d)"
+            ctrlPanel += "◪\(d)"
         }
         result = ""
         currentOperation = Operation.Empty
         outputLbl()
     }
 
+    //Cube Volume
+    @IBAction func cubeVolume(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let volume = round(10000*(a!*a!*a!))/10000
+            let d: String = forTailingZero(temp: volume)
+            runningNumber = "\(d)"
+            ctrlPanel += "❒\(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+
+    //Circle Perimeter
+    @IBAction func circlePerimeter(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let perimeter = round(10000*(2*Double.pi*a!))/10000
+            let d: String = forTailingZero(temp: perimeter)
+            runningNumber = "\(d)"
+            ctrlPanel += "◦\(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
     
+    //Circle Surface Area
+    @IBAction func circleSA(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let surfaceArea = round(10000*(Double.pi * (a!*a!)))/10000
+            let d: String = forTailingZero(temp: surfaceArea)
+            runningNumber = "\(d)"
+            ctrlPanel += "●\(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+    
+    //Sphere Surface Area
+    @IBAction func sphereSA(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let surfaceArea = round(10000*(4 * Double.pi * (a!*a!)))/10000
+            let d: String = forTailingZero(temp: surfaceArea)
+            runningNumber = "\(d)"
+            ctrlPanel += "◎\(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+    
+    //Sphere Volume
+    @IBAction func sphereVolume(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let volume = round(10000*(4/3 * Double.pi * (a!*a!*a!)))/10000
+            let d: String = forTailingZero(temp: volume)
+            runningNumber = "\(d)"
+            ctrlPanel += "◉\(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+    
+    //Rhombus Perimeter
+    @IBAction func rhombusPerimeter(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let perimeter = round(10000*(4 * a!))/10000
+            let d: String = forTailingZero(temp: perimeter)
+            runningNumber = "\(d)"
+            ctrlPanel += "◇\(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+    
+    //Rhombus Surface Area (Angle)
+    @IBAction func rhombusSAangle(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let surfaceArea = round(10000*((a! * a!) * sin(a!)))/10000
+            let d: String = forTailingZero(temp: surfaceArea)
+            runningNumber = "\(d)"
+            ctrlPanel += "◆\(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
     
     //Printing the result on the Labels
     func outputLbl() {
@@ -336,10 +466,7 @@ class ViewController: UIViewController {
                 runningNumber = ""
                 
                 //This function removes the trailing zero after the double number
-                func forTailingZero(temp: Double) -> String{
-                    let tempVar = String(format: "%g", temp)
-                    return tempVar
-                }
+                
                 
                 if currentOperation == Operation.Multiply {
                     let c = Double(leftValStr)! * Double(rightValStr)!
