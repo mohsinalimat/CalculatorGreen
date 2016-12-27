@@ -35,21 +35,21 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Kfm-sh-ezh" secondAttribute="height" multiplier="189:188" id="349-vs-OfS"/>
                                                         </constraints>
-                                                        <state key="normal" image="Tile"/>
+                                                        <state key="normal" image="x2"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBv-PI-q9G">
                                                         <rect key="frame" x="57" y="0.0" width="57" height="57"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="yBv-PI-q9G" secondAttribute="height" multiplier="1:1" id="QZ4-mg-Mto"/>
                                                         </constraints>
-                                                        <state key="normal" image="Tile"/>
+                                                        <state key="normal" image="x3"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFM-g9-gcU">
                                                         <rect key="frame" x="114" y="0.0" width="56.5" height="57"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="lFM-g9-gcU" secondAttribute="height" multiplier="1:1" id="RQZ-Ng-Bio"/>
                                                         </constraints>
-                                                        <state key="normal" image="Tile"/>
+                                                        <state key="normal" image="x4"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpR-fF-f9E">
                                                         <rect key="frame" x="170.5" y="0.0" width="57" height="57"/>
@@ -63,7 +63,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="xeo-lr-YaL" secondAttribute="height" multiplier="1:1" id="7Xg-oZ-r3a"/>
                                                         </constraints>
-                                                        <state key="normal" image="Tile"/>
+                                                        <state key="normal" image="PM"/>
                                                     </button>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqE-do-rdC">
                                                         <rect key="frame" x="284.5" y="0.0" width="57" height="57"/>
@@ -115,14 +115,14 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="dLJ-mm-pJC" secondAttribute="height" multiplier="1:1" id="K6e-KH-snB"/>
                                                         </constraints>
-                                                        <state key="normal" image="Tile"/>
+                                                        <state key="normal" image="2rx"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33Z-Qh-7yd">
                                                         <rect key="frame" x="57" y="0.0" width="56.5" height="56.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="33Z-Qh-7yd" secondAttribute="height" multiplier="1:1" id="tTQ-iC-TiV"/>
                                                         </constraints>
-                                                        <state key="normal" image="Tile"/>
+                                                        <state key="normal" image="3rx"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8N-NC-nRO">
                                                         <rect key="frame" x="113.5" y="0.0" width="57" height="56.5"/>
@@ -136,14 +136,14 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="LKc-sK-eQu" secondAttribute="height" multiplier="1:1" id="6Ej-6g-VBZ"/>
                                                         </constraints>
-                                                        <state key="normal" image="Tile"/>
+                                                        <state key="normal" image="π"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDe-RG-DHV">
                                                         <rect key="frame" x="227" y="0.0" width="57" height="56.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="mDe-RG-DHV" secondAttribute="height" multiplier="1:1" id="kdE-OZ-i9z"/>
                                                         </constraints>
-                                                        <state key="normal" image="Tile"/>
+                                                        <state key="normal" image="%"/>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fd2-qk-2Rb">
                                                         <rect key="frame" x="284" y="0.0" width="57" height="56.5"/>
@@ -749,6 +749,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="%" width="188" height="188"/>
         <image name="+" width="188" height="188"/>
         <image name="-" width="188" height="188"/>
         <image name="0" width="188" height="188"/>
@@ -756,7 +757,9 @@
         <image name="000" width="188" height="188"/>
         <image name="1" width="188" height="188"/>
         <image name="2" width="188" height="188"/>
+        <image name="2rx" width="188" height="188"/>
         <image name="3" width="188" height="188"/>
+        <image name="3rx" width="188" height="188"/>
         <image name="4" width="188" height="188"/>
         <image name="5" width="188" height="188"/>
         <image name="6" width="188" height="188"/>
@@ -769,6 +772,7 @@
         <image name="CircleSA" width="188" height="188"/>
         <image name="Comma" width="188" height="188"/>
         <image name="CubeVolume" width="188" height="188"/>
+        <image name="PM" width="188" height="188"/>
         <image name="RhombusPerimeter" width="188" height="188"/>
         <image name="RhombusSA" width="188" height="188"/>
         <image name="SphereSA" width="188" height="188"/>
@@ -778,6 +782,10 @@
         <image name="SquareSA" width="188" height="188"/>
         <image name="Tile" width="188" height="188"/>
         <image name="X" width="188" height="188"/>
+        <image name="x2" width="188" height="188"/>
+        <image name="x3" width="188" height="188"/>
+        <image name="x4" width="188" height="188"/>
         <image name="÷" width="188" height="188"/>
+        <image name="π" width="188" height="188"/>
     </resources>
 </document>
