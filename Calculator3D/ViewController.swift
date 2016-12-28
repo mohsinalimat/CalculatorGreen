@@ -448,6 +448,137 @@ class ViewController: UIViewController {
         outputLbl()
     }
     
+    //Number to the 2nd power
+    @IBAction func xToThe2ndPower(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let surfaceArea = round(10000*(a! * a!))/10000
+            let d: String = forTailingZero(temp: surfaceArea)
+            runningNumber = "\(d)"
+            ctrlPanel += "² = \(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+    
+    //Number to the 3rd power
+    @IBAction func xToThe3rdPower(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let surfaceArea = round(10000*(a! * a! * a!))/10000
+            let d: String = forTailingZero(temp: surfaceArea)
+            runningNumber = "\(d)"
+            ctrlPanel += "³ = \(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+    
+    //Number to the 4th power
+    @IBAction func xToThe4thPower(_ sender: Any) {
+        if runningNumber != "" {
+                let a = Double(runningNumber)
+                let surfaceArea = round(10000*(a! * a! * a! * a!))/10000
+                let d: String = forTailingZero(temp: surfaceArea)
+                runningNumber = "\(d)"
+                ctrlPanel += "⁴ = \(d)"
+            }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+    
+    //Square root of number
+    @IBAction func rootOfx(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let surfaceArea = round(10000*(a?.squareRoot())!)/10000
+            let d: String = forTailingZero(temp: surfaceArea)
+            runningNumber = "\(d)"
+            ctrlPanel = "√\(forTailingZero(temp: a!)) = \(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+    
+    //Cubic root of number
+    @IBAction func cRootOfx(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let surfaceArea = round(10000*(pow(a!, (1/3))))/10000
+            let d: String = forTailingZero(temp: surfaceArea)
+            runningNumber = "\(d)"
+            ctrlPanel = "∛\(forTailingZero(temp: a!)) = \(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+    
+    //Fourth root of number
+    @IBAction func fourthRootOfx(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let surfaceArea = round(10000*(pow(a!, (1/4))))/10000
+            let d: String = forTailingZero(temp: surfaceArea)
+            runningNumber = "\(d)"
+            ctrlPanel = "∜\(forTailingZero(temp: a!)) = \(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+    
+    //Inverse Number
+    @IBAction func inverseNumber(_ sender: Any) {
+        if runningNumber != "" {
+            let a = Double(runningNumber)
+            let surfaceArea = round(10000*(1/a!))/10000
+            let d: String = forTailingZero(temp: surfaceArea)
+            runningNumber = "\(d)"
+            ctrlPanel = "¹/\(forTailingZero(temp: a!)) = \(d)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+    
+    //Pi number
+    @IBAction func numberPi(_ sender: Any) {
+        runningNumber += "\(Double.pi)"
+        ctrlPanel += "π"
+        outputLbl()
+    }
+    
+    //Changing the sign to a number
+    @IBAction func plusMinus(_ sender: Any) {
+        if portraitOutputLbl.text != "" {
+            let a = "-\(runningNumber)"
+            runningNumber = a
+            ctrlPanel += " x (-1)"
+            outputLbl()
+        }
+    }
+    
+    //Per Cent Button
+    @IBAction func perCent(_ sender: Any) {
+        if runningNumber != "" {
+            processOperation(operation: currentOperation)
+            runningNumber = portraitOutputLbl.text!
+            let a: Double? = Double(runningNumber)
+            let perCent = a! / 100
+            let d: String = forTailingZero(temp: perCent)
+            runningNumber = "\(d)"
+            ctrlPanel += "% = \(runningNumber)"
+        }
+        result = ""
+        currentOperation = Operation.Empty
+        outputLbl()
+    }
+    
     //Printing the result on the Labels
     func outputLbl() {
         landscapeOutputLbl.text = runningNumber
