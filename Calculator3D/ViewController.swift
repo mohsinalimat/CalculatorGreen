@@ -548,9 +548,15 @@ class ViewController: UIViewController {
     
     //Pi number
     @IBAction func numberPi(_ sender: Any) {
-        runningNumber += "\(Double.pi)"
-        ctrlPanel += "π"
-        outputLbl()
+        if runningNumber != "" && currentOperation == Operation.Empty {
+            
+        } else {
+            portraitOutputLbl.text = ""
+            landscapeOutputLbl.text = ""
+            runningNumber = "\(Double.pi)"
+            ctrlPanel += "π"
+            outputLbl()
+        }
     }
     
     //Changing the sign to a number
@@ -635,5 +641,91 @@ class ViewController: UIViewController {
             currentOperation = operation
         }
     }
+    
+    //Application informations
+    @IBAction func infoButtonPressed(_ sender: Any) {
+        //Create the alert controller
+        let alertController = UIAlertController(title: "", message: "Thanks for downloading Calculator 3D", preferredStyle: .actionSheet)
+        
+        //Create and add the GitHub link
+        let gitImage = UIImage(named: "githubsrc")
+        let link = "https://github.com/FotiosTragopoulos/Calculator3D"
+        let gitLink = UIAlertAction(title: "GitHub Project", style: .default) { action -> Void in
+            UIApplication.shared.openURL(NSURL(string: link)! as URL)
+            print("something here... button click or action logging")
+        }
+        gitLink.setValue(gitImage, forKey: "image")
+        
+        //Create and add the Portfolio link
+        let portImage = UIImage(named: "web")
+        let linkPortfolio = "http://fotiostragopoulos.myds.me"
+        let portLink = UIAlertAction(title: "Portfolio Website", style: .default) { action -> Void in
+            UIApplication.shared.openURL(NSURL(string: linkPortfolio)! as URL)
+            print("something here... button click or action logging")
+        }
+        portLink.setValue(portImage, forKey: "image")
+        
+        
+        //Create and add OK action
+        let yesAction = UIAlertAction(title: "OK", style: .cancel) { action -> Void in
+        }
+        
+        alertController.addAction(portLink)
+        alertController.addAction(gitLink)
+        alertController.addAction(yesAction)
+        
+        //Present the AlertController
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func landscapeInfo(_ sender: UIButton) {
+        //Create the alert controller
+        let alertController = UIAlertController(title: "", message: "Thanks for downloading Calculator 3D", preferredStyle: .actionSheet)
+        
+        //Create and add the GitHub link
+        let gitImage = UIImage(named: "githubsrc")
+        let link = "https://github.com/FotiosTragopoulos/Calculator3D"
+        let gitLink = UIAlertAction(title: "GitHub Project", style: .default) { action -> Void in
+            UIApplication.shared.openURL(NSURL(string: link)! as URL)
+            print("something here... button click or action logging")
+        }
+        gitLink.setValue(gitImage, forKey: "image")
+        
+        //Create and add the Portfolio link
+        let portImage = UIImage(named: "web")
+        let linkPortfolio = "http://fotiostragopoulos.myds.me"
+        let portLink = UIAlertAction(title: "Portfolio Website", style: .default) { action -> Void in
+            UIApplication.shared.openURL(NSURL(string: linkPortfolio)! as URL)
+            print("something here... button click or action logging")
+        }
+        portLink.setValue(portImage, forKey: "image")
+        
+        
+        //Create and add OK action
+        let yesAction = UIAlertAction(title: "OK", style: .cancel) { action -> Void in
+        }
+        
+        alertController.addAction(portLink)
+        alertController.addAction(gitLink)
+        alertController.addAction(yesAction)
+        
+        //Present the AlertController
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    //iPad Linking Button
+    @IBAction func gitPadAction(_ sender: Any) {
+        if let url = NSURL(string: "https://github.com/FotiosTragopoulos/Calculator3D") {
+            UIApplication.shared.openURL(url as URL)
+        }
+    }
+    
+    @IBAction func portfolioPadAction(_ sender: Any) {
+        if let url = NSURL(string: "http://fotiostragopoulos.myds.me") {
+            UIApplication.shared.openURL(url as URL)
+        }
+    }
+
+    
     
 }
