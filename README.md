@@ -1,7 +1,7 @@
 # Calculator3D
 An example Project similar to the iOS Calculator
 
-![CalculatorGreen](https://raw.githubusercontent.com/FotiosTragopoulos/CalculatorGreen/master image.png)
+![CalculatorGreen](https://raw.githubusercontent.com/FotiosTragopoulos/CalculatorGreen/master/image.png)
 
 # Privacy Policy
 
