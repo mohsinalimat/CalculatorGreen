@@ -457,10 +457,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAN-AK-79B">
-                                        <rect key="frame" x="8" y="629" width="342" height="80"/>
+                                        <rect key="frame" x="8" y="649" width="260" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="7DF-Zb-v0x"/>
-                                            <constraint firstAttribute="width" constant="342" id="gUM-7Y-AwL"/>
+                                            <constraint firstAttribute="height" constant="60" id="oUp-iA-4ih"/>
+                                            <constraint firstAttribute="width" constant="260" id="wy9-ID-dqZ"/>
                                         </constraints>
                                         <state key="normal" image="gitButtoniPad"/>
                                         <connections>
@@ -468,10 +468,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuX-DB-iUh">
-                                        <rect key="frame" x="358" y="629" width="342" height="80"/>
+                                        <rect key="frame" x="276" y="649" width="260" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="9RF-dM-ObL"/>
-                                            <constraint firstAttribute="width" constant="342" id="9d1-Vu-03O"/>
+                                            <constraint firstAttribute="width" constant="260" id="H6W-vq-quy"/>
+                                            <constraint firstAttribute="height" constant="60" id="hSI-tB-TRU"/>
                                         </constraints>
                                         <state key="normal" image="portfolioButtoniPad"/>
                                         <connections>
@@ -491,10 +491,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="ZuX-DB-iUh" firstAttribute="leading" secondItem="TAN-AK-79B" secondAttribute="trailing" constant="8" id="6Od-FC-s6S"/>
                                     <constraint firstAttribute="trailing" secondItem="2hL-d6-cym" secondAttribute="trailing" id="73x-h3-tAD"/>
-                                    <constraint firstItem="2hL-d6-cym" firstAttribute="top" secondItem="ZuX-DB-iUh" secondAttribute="bottom" constant="8" id="7Li-a2-woT"/>
-                                    <constraint firstItem="2hL-d6-cym" firstAttribute="top" secondItem="TAN-AK-79B" secondAttribute="bottom" constant="8" id="91O-xL-F1k"/>
                                     <constraint firstItem="2hL-d6-cym" firstAttribute="top" secondItem="Zqe-3O-FgZ" secondAttribute="bottom" constant="30" id="9Hf-69-B3L"/>
                                     <constraint firstItem="fMU-X1-p7H" firstAttribute="top" secondItem="6zD-bC-AYc" secondAttribute="bottom" constant="8" id="AJk-1t-b2W"/>
                                     <constraint firstItem="6zD-bC-AYc" firstAttribute="top" secondItem="kRb-fI-IlS" secondAttribute="top" constant="8" id="IiK-2D-PxN">
@@ -502,13 +499,16 @@
                                     </constraint>
                                     <constraint firstItem="6zD-bC-AYc" firstAttribute="leading" secondItem="kRb-fI-IlS" secondAttribute="leading" constant="8" id="K9f-Gp-kc0"/>
                                     <constraint firstAttribute="trailing" secondItem="6zD-bC-AYc" secondAttribute="trailing" constant="8" id="QHk-2x-oNv"/>
+                                    <constraint firstItem="2hL-d6-cym" firstAttribute="top" secondItem="ZuX-DB-iUh" secondAttribute="bottom" constant="8" id="Sfr-6H-WIl"/>
                                     <constraint firstItem="2hL-d6-cym" firstAttribute="leading" secondItem="kRb-fI-IlS" secondAttribute="leading" id="TcM-Xu-1m6"/>
+                                    <constraint firstItem="2hL-d6-cym" firstAttribute="top" secondItem="TAN-AK-79B" secondAttribute="bottom" constant="8" id="UJx-YE-tci"/>
                                     <constraint firstItem="fMU-X1-p7H" firstAttribute="leading" secondItem="kRb-fI-IlS" secondAttribute="leading" constant="8" id="WcB-QU-PXy"/>
                                     <constraint firstItem="Zqe-3O-FgZ" firstAttribute="leading" secondItem="kRb-fI-IlS" secondAttribute="leading" constant="8" id="gbp-r7-QwX"/>
+                                    <constraint firstItem="TAN-AK-79B" firstAttribute="leading" secondItem="kRb-fI-IlS" secondAttribute="leading" constant="8" id="py3-oY-VHb"/>
                                     <constraint firstItem="2hL-d6-cym" firstAttribute="top" secondItem="fMU-X1-p7H" secondAttribute="bottom" constant="8" id="qtT-4b-ztr">
                                         <variation key="heightClass=regular-widthClass=regular" constant="30"/>
                                     </constraint>
-                                    <constraint firstItem="TAN-AK-79B" firstAttribute="leading" secondItem="kRb-fI-IlS" secondAttribute="leading" constant="8" id="uNc-a5-H6O"/>
+                                    <constraint firstItem="ZuX-DB-iUh" firstAttribute="leading" secondItem="TAN-AK-79B" secondAttribute="trailing" constant="8" id="rGq-1l-sWl"/>
                                     <constraint firstAttribute="trailing" secondItem="fMU-X1-p7H" secondAttribute="trailing" constant="8" id="vFi-SM-PpN"/>
                                     <constraint firstAttribute="bottom" secondItem="2hL-d6-cym" secondAttribute="bottom" id="wRW-XA-a80"/>
                                 </constraints>
