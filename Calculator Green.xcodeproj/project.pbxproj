@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F40DBEEF1DFEA582002A402F /* Green Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Green Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40DBEEF1DFEA582002A402F /* Calculator Green.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator Green.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40DBEF21DFEA582002A402F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F40DBEF41DFEA582002A402F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F40DBEF91DFEA582002A402F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		F40DBEE61DFEA581002A402F = {
 			isa = PBXGroup;
 			children = (
-				F40DBEF11DFEA582002A402F /* Calculator3D */,
+				F40DBEF11DFEA582002A402F /* Calculator Green */,
 				F40DBEF01DFEA582002A402F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,12 +46,12 @@
 		F40DBEF01DFEA582002A402F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F40DBEEF1DFEA582002A402F /* Green Calculator.app */,
+				F40DBEEF1DFEA582002A402F /* Calculator Green.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F40DBEF11DFEA582002A402F /* Calculator3D */ = {
+		F40DBEF11DFEA582002A402F /* Calculator Green */ = {
 			isa = PBXGroup;
 			children = (
 				F40DBEF21DFEA582002A402F /* AppDelegate.swift */,
@@ -61,15 +61,16 @@
 				F40DBEFB1DFEA582002A402F /* LaunchScreen.storyboard */,
 				F40DBEFE1DFEA582002A402F /* Info.plist */,
 			);
+			name = "Calculator Green";
 			path = Calculator3D;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F40DBEEE1DFEA581002A402F /* Green Calculator */ = {
+		F40DBEEE1DFEA581002A402F /* Calculator Green */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F40DBF011DFEA582002A402F /* Build configuration list for PBXNativeTarget "Green Calculator" */;
+			buildConfigurationList = F40DBF011DFEA582002A402F /* Build configuration list for PBXNativeTarget "Calculator Green" */;
 			buildPhases = (
 				F40DBEEB1DFEA581002A402F /* Sources */,
 				F40DBEEC1DFEA581002A402F /* Frameworks */,
@@ -79,9 +80,9 @@
 			);
 			dependencies = (
 			);
-			name = "Green Calculator";
+			name = "Calculator Green";
 			productName = Calculator3D;
-			productReference = F40DBEEF1DFEA582002A402F /* Green Calculator.app */;
+			productReference = F40DBEEF1DFEA582002A402F /* Calculator Green.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F40DBEEA1DFEA581002A402F /* Build configuration list for PBXProject "Green Calculator" */;
+			buildConfigurationList = F40DBEEA1DFEA581002A402F /* Build configuration list for PBXProject "Calculator Green" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -114,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F40DBEEE1DFEA581002A402F /* Green Calculator */,
+				F40DBEEE1DFEA581002A402F /* Calculator Green */,
 			);
 		};
 /* End PBXProject section */
@@ -282,7 +283,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F40DBEEA1DFEA581002A402F /* Build configuration list for PBXProject "Green Calculator" */ = {
+		F40DBEEA1DFEA581002A402F /* Build configuration list for PBXProject "Calculator Green" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F40DBEFF1DFEA582002A402F /* Debug */,
@@ -291,7 +292,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F40DBF011DFEA582002A402F /* Build configuration list for PBXNativeTarget "Green Calculator" */ = {
+		F40DBF011DFEA582002A402F /* Build configuration list for PBXNativeTarget "Calculator Green" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F40DBF021DFEA582002A402F /* Debug */,
